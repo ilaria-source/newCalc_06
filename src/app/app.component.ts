@@ -11,3 +11,4 @@ export class AppComponent {
   dataCalcList: {typeName: TypeCalc; url: string; icon: string; active: boolean}[] = dataCalc;
   constructor() {}
 }
+//immagina l'appcomponent come il main di c#, qui richiamo ciò che mi serve ma non vi è logica alcuna

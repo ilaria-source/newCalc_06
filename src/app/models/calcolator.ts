@@ -6,6 +6,6 @@ export class CalcolatorType {
     public typeName: TypeCalc,
     public url: string,
     public icon: string,
-    public active: boolean
+    public isOn: boolean
     ){}
 }
