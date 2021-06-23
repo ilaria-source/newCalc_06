@@ -26,11 +26,13 @@
           <ion-note> selezionare la modalità</ion-note>
           <br>
 
-          <ion-menu-toggle auto-hide="false" *ngFor="let item of dataCalcList" [ngStyle]="{color: item.active === false ? '#7373a5':'#000000'}">
+          <ion-menu-toggle auto-hide="false" *ngFor="let item of dataCalcList">
+          <!-- <div [ngIf]="{class: item.active === false ? 'disabled':'active'}"> -->
             <ion-item routerDirection="root" [routerLink]="[item.url]"  lines="none" detail="false" routerLinkActive="selected" >
               <ion-icon slot="start" [ios]="item.icon + '-outline'" [md]="item.icon + '-sharp'"></ion-icon>
               <ion-label > {{item.typeName}} </ion-label>
             </ion-item>
+          <!-- </div> -->
           </ion-menu-toggle>
           
         </ion-list>

@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   redirectTo: 'home',
-  //   pathMatch: 'full'
-  // },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
   {
     path: 'home',
-    loadChildren: () => import('./Home/home.module').then( m => m.HomePageModule)
+    loadChildren: () =>
+    import('./Home/home.module').then( m => m.HomePageModule)
   },
   {
     path: 'home/classic',
@@ -21,14 +21,9 @@ const routes: Routes = [
     loadChildren: () => import('./scientific-mode/scientific-mode.module').then( m => m.ScientificModePageModule)
   },
   {
-    path: 'home/scientific-mode',
-    loadChildren: () => import('./scientific-mode/scientific-mode.module').then( m => m.ScientificModePageModule)
-  },
-  {
     path: 'programmer-mode',
     loadChildren: () => import('./programmer-mode/programmer-mode.module').then( m => m.ProgrammerModePageModule)
   }
-
 ];
 
 @NgModule({
