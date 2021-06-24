@@ -23,18 +23,19 @@
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header>Calcolatrice</ion-list-header>
-          <ion-note> selezionare la modalità</ion-note>
+          <ion-note>selezionare la modalità</ion-note>
           <br>
 
-          <ion-menu-toggle auto-hide="false" *ngFor="let item of dataCalcList"  [ngClass]="{active: item.isOn === true}">
+          <ion-menu-toggle auto-hide="false" *ngFor="let item of dataCalcList"  [ngClass]="{disabled: item.isOn === false}">
 
             <!-- <div [ngIf]="class: item.active === false ? then 'disabled':'active' "> -->
               <!-- <li *ngClass="{active: item.isOn ==='true'}">  </li>
               <li *ngClass="{disabled: item.isOn ==='false'}"> </li> -->
 
-
+<!-- ios ri riferisce ovviamente al sistema operativo  -->
             <ion-item routerDirection="root" [routerLink]="[item.url]"  lines="none" detail="false" routerLinkActive="selected" >
-              <ion-icon slot="start" [ios]="item.icon + '-outline'" [md]="item.icon + '-sharp'"></ion-icon>
+              <ion-icon slot="start" [ios]="item.icon + '-outline'" [md]="item.icon + '-sharp'" ></ion-icon>
+              <!-- (click)='getCalculator()'' -->
               <ion-label > {{item.typeName}} </ion-label>
             </ion-item>
           <!-- </div> -->

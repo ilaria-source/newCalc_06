@@ -27,7 +27,7 @@ export class HomePage implements OnInit {
 //   {
 //     case TypeCalc.classic:
 //       console.log('Hai selezionato la calcolatrice classica');
-//       this.navController.navigateForward("./classic");
+//       this.navController.navigateForward('./classic');
 //       ClassicModePageModule;
 //       break;
 //     case TypeCalc.scientific:
